@@ -66,24 +66,28 @@ git clone [https://github.com/YOUR_USERNAME/Phase2_iibitoye.git](https://github.
 cd Phase2_iibitoye
 ```
 
-3. Create a Virtual Environment (Optional but Recommended)
-Bash
+##3. Create a Virtual Environment (Optional but Recommended)
+```bash
 # Mac/Linux
 python3 -m venv venv
 source venv/bin/activate
+```
 
 # Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-4. Install Dependencies
+###4. Install Dependencies
 
 Install all required Python packages from the requirements.txt file.
 
-Bash
+```bash
 pip install -r requirements.txt
+```
 
-5. Configure Environment Variables
+##5. Configure Environment Variables
 
 The system requires an OpenAI API key to run.
 
@@ -94,13 +98,14 @@ Add your API key to the .env file:
 OPENAI_API_KEY=sk-proj-your-key-here...
 
 
-🚀 How to Run
-A. Run the Full Evaluation (For Graders)
+###🚀 How to Run
+A. Run the Full Evaluation
 
 To generate the full evaluation report on the 20-query test set, run the main evaluation script. This script uses MMR Reranking and Structured Citations.
 
-Bash
+```bash
 python src/eval/eval.py
+```
 Output: Prints Q&A to the console and saves the report to outputs/evaluation_results.json.
 
 Logs: Saves detailed retrieval logs (with chunks) to logs/retrieval_logs.json.
@@ -109,8 +114,9 @@ B. Interactive Mode (Test Your Own Queries)
 
 To chat with the system and ask your own custom questions about low resource language NLP:
 
-Bash
+```bash
 python src/RAG/query.py
+```
 Usage: Type your question when prompted. Type exit to quit.
 
 Note: This mode includes an experimental "Query Expansion" feature that im testing for Phase 3 that brainstorms synonyms of the query before searching.
@@ -119,6 +125,7 @@ C. Re-Ingest Data (Optional)
 
 If you want to rebuild the database from scratch (e.g., if I added new PDFs to data/):
 
-Bash
+```bash
 python src/ingest/ingest.py
+```
 Warning: This will delete and recreate the data/chroma_db folder.
