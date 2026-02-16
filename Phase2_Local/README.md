@@ -59,7 +59,7 @@ Connectivity	Requires Internet	Offline-capable
 As noted in the main report, the evaluation metrics for this local instance will show a slight variance in synthesis quality compared to the GPT-4o results. This is an expected result of reducing the model parameter count from >1T to 3B. However, the retrieval accuracy (the ability to find the correct document chunk) remains consistent across both implementations.
 
 ## 📂Local Directory Structure
-Plaintext
+```
 Phase2_Local/
 ├── requirements.txt      # Specific local dependencies (HuggingFace/Ollama)
 ├── data/
@@ -69,3 +69,4 @@ Phase2_Local/
 │   ├── ingest/           # Local embedding logic
 │   └── RAG/              # Local inference & prompt logic
 └── outputs/              # Local evaluation results
+```
