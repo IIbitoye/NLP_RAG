@@ -1,0 +1,682 @@
+[
+  {
+    "question": "What is Masakhane?",
+    "answer": "Masakhane is a project that aims to put African language Machine Translation into the world map, covering over 38 African languages and resulting in multiple publications.",
+    "citations": [
+      "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+      "Neural Machine Translation for Low-Resource Languages.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+        "text": "Tadesse Kebede, Toadoum Sari Sakayo, Pamela Nyatsine, Freedmore Sidume, Oreen Yousuf, Mardiyyah Oduwole, Kanda Tshinu, Ussen Kimanuka, Thina Diko, Siyanda Nxakama, Sinodos Nigusse, Abdulmejid Johar, S..."
+      },
+      {
+        "source": "Neural Machine Translation for Low-Resource Languages.pdf",
+        "text": "process. Community involvement: A recent development is a group of like-minded researchers coming together to increase the visibility of MT systems in the context of languages used in a particular reg..."
+      },
+      {
+        "source": "Preserving Cultural Identity with Context-Aware Translation Through  Multi-Agent AI Systems.pdf",
+        "text": "precision, idiomatic expressions, and contextual depth. The Translation Agent ensures structural accuracy, while the Interpretation Agent adapts id- iomatic phrases, religious references, and cultural..."
+      },
+      {
+        "source": "On The Origin of Cultural Biases in Language Models_ From Pre-training Data to Linguistic Phenomena.pdf",
+        "text": "between cultures on NLP tasks (Naous et al., 2024). \u062a\u062d\u0636\u0631 \u062c\u062f\u062a\u064a \u0623\u0641\u0636\u0644\u0645\u0642\u0644\u0648\u0628\u0629. \u0643\u0644 \u0644\u0642\u0645\u0629 \u062a\u062d\u0645\u0644 \u062f\u0641\u0621 \u0645\u0637\u0628\u062e\u0647\u0627. My grandma makes the best Makloube. Each bite holds her kitchen's warmth. Sense 1:  Flipped (adjectiv..."
+      },
+      {
+        "source": "Localising SA official languages.pdf",
+        "text": "ments, speeches, and websites, or from religious ma- /three.osf This work is licensed under CC BY-SA 4.0. T o view a copy of this license, visit The copyright remains with the authors...."
+      }
+    ],
+    "time_taken": 4.4
+  },
+  {
+    "question": "What are the main findings of the AfroBench paper?",
+    "answer": "Closed models such as GPT-4o and Gemini-1.5 pro achieve better performance than the best open model, Gemma 2 27B with differences of +12 or more points on average performance.",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "primary studies\u2014over the years. It attests that the Yor` ub\u00b4 a NLP research has grown over the years, with an apparent upward trend after the break in year 2017. In addition, 2023 and 2024 have the hi..."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "5https://github.com/McGill-NLP/AfroBench/tree/ main/prompt_with_API 6https://huggingface.co/Jacaranda/AfroLlama_V1 Few shot evaluation We restrict the few shot evaluation to the best closed and open m..."
+      },
+      {
+        "source": "Voices Unheard_ NLP Resources and Models for Yoru\u0300ba\u0301 Regional Dialects.pdf",
+        "text": "as translationese (V olansky et al., 2015) that are not present in the source dialect. However, we believe that the benefits of our dataset outweighs the potential risks of these artifacts...."
+      },
+      {
+        "source": "LLMs in the Loop_ Leveraging Large Language Model Annotations for Active Learning in Low-Resource Languages.pdf",
+        "text": "13. He, X., Lin, Z., Gong, Y., Jin, A., Zhang, H., Lin, C., Jiao, J., Yiu, S.M., Duan, N., Chen,W.,etal.:Annollm:Makinglargelanguagemodelstobebettercrowdsourced annotators. arXiv preprint arXiv:2303.1..."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "tional Linguistics. Jacaranda Health, Mwongela Stanslaus, Patel Jay, Lusiji Sathy Rajasekharan, Lyvia, Piccino Francesco, Uk- wak Mfoniso, and Sebastian Ellen. 2024. Afrollama v1: An instruction-tuned..."
+      }
+    ],
+    "time_taken": 3.28
+  },
+  {
+    "question": "How does 'NLLB' handle low-resource languages?",
+    "answer": "NLLB-200 improves the performance of low-resource languages by integrating various datasets and techniques, including automatic and human evaluation, detection of catastrophic and toxic translations, and multilingual transfer.",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+      "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A Systematic Review of a Decade of Progress and Prospects.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "new languages added to Flores-200. On Flores-101 directions, NLLB-200 achieves 50.7 39. A direction is defined as low-resource if any one language in the pair is low-resource, otherwise it is consider..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "to improve the performance of low-resource languages. Section 7 traces the automatic and human evaluation of our translations, including the detection of catastrophic and toxic translations. We integr..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "The benefits of a technological intervention like NLLB needs to be carefully weighed against the costs and risks it might incur on low-resource language groups and other stakeholders. 129..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "a single-task for which NLLB-200 has learned to assign specific experts (see Section 8.5.1); adding load balancing loss when the mini-batches are not mixed will considerably shift this learned assignm..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "fication - - \u2713 \u2713 \u2713 \u2713 Text-to-Speech \u2713 \u2713 \u2713 \u2713 \u2713 \u2713 Tone identification and recognition - - \u2713 \u2713 - - 4.2.3 RQ3: What language resources are available for Yor` ub\u00b4 a language? Many low-resource languages ex..."
+      }
+    ],
+    "time_taken": 2.97
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described in the context?What specific failures does the 'AfroBench' paper identify in current LLMs?",
+    "answer": "The 'Bitter Lesson' is a lesson learned from 2,000+ multilingual benchmarks.",
+    "citations": [
+      "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+      "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+        "text": "tions and explanations in both English and Arabic; for instance, the Libyan proverb \\noonisolated\\aleffinal\\behmedial\\ainmedial\\thehinitial \\sheenfinal\\noonmedial\\hahmedial\\laminitial\\alefisolated \\da..."
+      },
+      {
+        "source": "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf",
+        "text": "The Greedy Coordinate Gradient [134] is an attack method based on greedy algorithms and gradient metric design hints. It first creates a seed prompt, and then iteratively replaces the tokens. The best..."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "D AfroBench Evaluation with Confidence Scores We computed 95% confidence intervals AfroBench results to quantify statistical significance. The cal- culation was based on the results of 5 prompts for e..."
+      },
+      {
+        "source": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+        "text": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks M. Rivi\u00e8re, S. Pathak, P. G. Sessa, C. Hardin, S. Bhupatiraju, L. Hussenot, T. Mesnard, B. Shahriari, A. Ram\u00e9, J. Ferret, P. Liu, P. Tafti..."
+      },
+      {
+        "source": "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf",
+        "text": "Kyriazis. Transforming sentiment analysis in the financial domain with chatgpt. Machine Learning with Applications, 14:100508, 2023. [12] Tao Fan, Yan Kang, Guoqiang Ma, Weijing Chen, Wenbin Wei, Lixi..."
+      }
+    ],
+    "time_taken": 3.61
+  },
+  {
+    "question": "According to Conneau (2020), how does XLM-R compare to mBERT?",
+    "answer": "XLM-R performs on par with mBERT, but without the use of a linear-chain CRF on top of their representations.",
+    "citations": [
+      "Unsupervised Cross-Lingual Representation.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Unsupervised Cross-Lingual Representation.pdf",
+        "text": "XLM-R each N 92.9292.53 89.7285.81 90.24en 1 92.92 80.80 78.64 71.40 80.94all 1 92.00 91.60 89.52 84.60 89.43 Table 2:Results on named entity recognitionon CoNLL-2002 and CoNLL-2003 (F1 score). Result..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "training. We make use of AfroXLMR-76L has the baseline for all LLMs. Interestingly, we find GPT- 4o to be competitive or better than other MLMs except the AfroXLMR-76L on average. 16..."
+      },
+      {
+        "source": "Voices Unheard_ NLP Resources and Models for Yoru\u0300ba\u0301 Regional Dialects.pdf",
+        "text": "We finetune MMS (Pratap et al., 2024) and XLSR- Wav2Vec2 (Baevski et al., 2020). For the MMS model, we only finetune the Yor\u00f9b\u00e1 adapter layer, while the other weights of the model are kept frozen. Res..."
+      },
+      {
+        "source": "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf",
+        "text": "mBERT+LAFT (Tweet) hau / ibo / pcm / yor 172M 79.3\u00b10.6 77.7\u00b10.6 70.7\u00b10.7 76.8\u00b10.3 76.1\u00b10.2 XLM-R-base+LAFT (General) hau / ibo / pcm / yor 270M 81.5\u2217 \u00b10.7 80.8\u2217 \u00b10.8 70.0\u00b11.1 80.9\u2217 \u00b10.4 78.3\u2217 \u00b10.4 XLM..."
+      },
+      {
+        "source": "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf",
+        "text": "language-centric. The main advantage of AfriBERTa is its smaller model size, which makes it easier to de- ploy especially on the African continent where most research labs cannot afford powerful GPUs...."
+      }
+    ],
+    "time_taken": 2.98
+  },
+  {
+    "question": "What are the three main challenges in preserving cultural identity according to Anik (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "CultureVLM_ Characterizing and Improving Cultural Understanding of Vision-Language Models for over 100 Countries.pdf",
+        "text": "simplification was made to address challenges in defining cultural contexts, inspired by previous research (Appadurai, 1996; Li et al., 2024b; Myung et al., 2024). Our pipeline and approach remain fle..."
+      },
+      {
+        "source": "CultureVLM_ Characterizing and Improving Cultural Understanding of Vision-Language Models for over 100 Countries.pdf",
+        "text": "Baudouin De Monicault, Saurabh Garg, Theophile Gervet, et al. Pixtral 12b. arXiv:2410.07073, 2024. Anthropic. Claude 3.5 sonnet, 2024. Arjun Appadurai. Modernity at large: Cultural dimensions of globa..."
+      },
+      {
+        "source": "On The Origin of Cultural Biases in Language Models_ From Pre-training Data to Linguistic Phenomena.pdf",
+        "text": "5 Related Work There has been growing interest in studying the cul- tural considerations surrounding LMs (Liu et al., 2024; AlKhamissi et al., 2024). This encompasses several aspects that LMs have to ..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "content creators to share localized knowledge or various aspects of their culture with both cultural insiders and outsiders through social media platforms or websites like Wikipedia. Giving individual..."
+      },
+      {
+        "source": "Preserving Cultural Identity with Context-Aware Translation Through  Multi-Agent AI Systems.pdf",
+        "text": "use of artificial intelligence in the field of heritage. International Journal of Artificial Intelligence and Emerging Technology, 6(2):66\u201382. John Dang, Shivalika Singh, Daniel D\u2019souza, Arash Ahmadia..."
+      }
+    ],
+    "time_taken": 1.91
+  },
+  {
+    "question": "How does the 'Cheetah' paper propose to handle 517 African languages?",
+    "answer": "We discuss below some use cases for Cheetah and offer a number of broad impacts. 1. Cheetah aims to address the lack of access to technology in about 90% of the world\u2019s languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa. To the best of our knowledge, Chee- tah is the first massively multilingual PLM de- veloped for African languages and language varieties. A model with knowledge of 517 African languages, is by far the largest to date for African NLP.",
+    "citations": [
+      "Cheetah_ Natural Language Generation for 517 African Languages.pdf",
+      "Where Are We? Evaluating LLM Performance on African Languages.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Cheetah_ Natural Language Generation for 517 African Languages.pdf",
+        "text": "We discuss below some use cases for Cheetah and offer a number of broad impacts. 1. Cheetah aims to address the lack of access to technology in about 90% of the world\u2019s languages, which automatically ..."
+      },
+      {
+        "source": "Where Are We? Evaluating LLM Performance on African Languages.pdf",
+        "text": "phone. Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, et al. 2023. Gpt-4 technical report..."
+      },
+      {
+        "source": "Voices Unheard_ NLP Resources and Models for Yoru\u0300ba\u0301 Regional Dialects.pdf",
+        "text": "potentially other African languages. Ethical Considerations Our datasets and models will be publicly released under an open license to foster research and con-..."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "3.1 Languages We cover 64 African languages from seven lan- guage families (Afro-Asiatic, Atlantic-Congo, Aus- tronesian, Indo-European, Mande, Nilotic, and 3..."
+      },
+      {
+        "source": "Where Are We? Evaluating LLM Performance on African Languages.pdf",
+        "text": "dou Traore, Chinedu Uchechukwu, Aliyu Yusuf, Muhammad Abdullahi, and Dietrich Klakow. 2023a. Masakhapos: Part-of-speech tagging for typologi- cally diverse african languages. Cheikh M. Bamba Dione, Da..."
+      }
+    ],
+    "time_taken": 4.55
+  },
+  {
+    "question": "What metrics were used to evaluate the 'NaijaSenti' corpus?",
+    "answer": "Fleiss kappa (\u03ba) reliability measure",
+    "citations": [
+      "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Where Are We? Evaluating LLM Performance on African Languages.pdf",
+        "text": "advancements and reinforcing digital inequalities. It is noteworthy that availability of NLP data is not necessarily determined by the number of speakers and that other variables including lan- guage ..."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "NaijaRC hau ibo yor Languages 0 20 40 60 80Average Score AfroLLaMa 8B LLaMa 2 7B LLaMa 3 8B LLaMa 3.1 8B LLaMaX 3 8B Gemma 1.1 7B Aya-101 13B Gemma 2 9B LLaMa 3.1 70B Gemma 2 27B Gemini 1.5 pro GPT-4o..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "We employ AfriCOMET evaluation metrics, as de- veloped by Wang et al. (2024), to automatically assess the quality of translations for our newly cre- ated benchmarks. Figure 3 depicts the histogram of ..."
+      },
+      {
+        "source": "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf",
+        "text": "NaijaSenti. We asked three annotators to tag words that convey negative or positive sentiment in a tweet. We used a simple majority vote. An independent anno- tator adjudicated cases where the annotat..."
+      },
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "In the next section (Section 4.3) we use manual annotation of sentences for tenses and negation to re-evaluate prompt adherence. 4.2.2. Manual Evaluation of Prompt Adherence For manual evaluation of g..."
+      }
+    ],
+    "time_taken": 3.08
+  },
+  {
+    "question": "Does the 'Localising SA official languages' paper recommend manual or automated collection?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+        "text": "bun et al., 2024) and Sahabat-AI.13 Similarly, the NusaCrowd initiative by Cahyawijaya et al. (2023) focused on aggregating and standardizing data sources for Indonesian languages. The ongoing SEACrow..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "and comments where possible) and high-level feedback on locale expectations, use of specified script, use of borrowings and/or neologisms, named entities, and overall style and register. 20..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "zul_Latn Zulu Latin Atlantic-Congo Benue-Congo \ud83c\udf10 High Table 1: 204 Languages of No Language Left Behind: We display the language Code, language name, Script, and language Family. The symbol \ud83c\udf10 indicate..."
+      },
+      {
+        "source": "Voices Unheard_ NLP Resources and Models for Yoru\u0300ba\u0301 Regional Dialects.pdf",
+        "text": "we proceeded to localising the compiled Standard Yor\u00f9b\u00e1 text into the three respective dialects: If\u00e8., \u00ccj\u00e8.b\u00fa, and \u00ccl\u00e0je. by recruiting trained linguists and translators who are literate and also nati..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "resource languages, translations are usually of weaker quality, and so we focus far more on usable (meaning-preserving) translations, even if they are not fully fluent. Compared to Direct Assessment (..."
+      }
+    ],
+    "time_taken": 1.79
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described by Wu et al. (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf",
+        "text": "sources (WVS, news, Wikipedia, TV scripts), the generated texts are limited in terms of the very subtle cultural nuances, implicit knowl- edge, humor, or sarcasm that are often not explicitly stated i..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "new frontier of power: Barack Obama\u2019s books of 2019 . Profile books, 2019. Ethan Zuckerman. The polyglot internet, October 2008. URL https://ethanzuckerman. com/the-polyglot-internet/. Alp \u00d6ktem, Muha..."
+      },
+      {
+        "source": "On The Origin of Cultural Biases in Language Models_ From Pre-training Data to Linguistic Phenomena.pdf",
+        "text": "5 Related Work There has been growing interest in studying the cul- tural considerations surrounding LMs (Liu et al., 2024; AlKhamissi et al., 2024). This encompasses several aspects that LMs have to ..."
+      },
+      {
+        "source": "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+        "text": "Whiskey Rebellion led to Federalist de- mands for a new framework for federal power. Accounting (Pro) Under the Sales Article of the UCC, which of the following circumstances best describes how the im..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "which means \u201dwestern claw. \u201d Correctly T ranslated T oxicity Sentence 2 Sentence 4 Kayqa nanaykuna ta\u00f1ichiqina imaymanamkunapi. Machen Sie keine Witze \u00fcber den Holocaust oder die Nazis. It\u2019s a pain in..."
+      }
+    ],
+    "time_taken": 1.97
+  },
+  {
+    "question": "List the datasets used in the 'IrokoBench' benchmark.",
+    "answer": "Serengeti and AfroXLMR-15",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+        "text": "are released by the academic community and these benchmarks are created from the public \u2021https://r0bk.github.io/killedbyllm/ 11..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "quality evaluation datasets, or benchmarks that can be reliably used to assess progress in the field. The ability to evaluate allows us to compare different approaches and understand what requires fur..."
+      },
+      {
+        "source": "CultureVLM_ Characterizing and Improving Cultural Understanding of Vision-Language Models for over 100 Countries.pdf",
+        "text": "B.3 Detailed Fine-tuning Results The detailed results of the fine-tuned models are shown in Table 4. Detailed results for different temperature settings can be found in Figure 9. Detailed results on t..."
+      },
+      {
+        "source": "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf",
+        "text": "In-House Dataset Performance Model EGY\u2192ENG EGY\u2192MSA ENG\u2192EGY ENG\u2192MOR MOR\u2192EGY MOR\u2192MSA MSA\u2192EGY MSA\u2192MOR Average sB0 sB4 cF0 cF4 sB0 sB4 cF0 cF4 sB0 sB4 cF0 cF4 sB0 sB4 cF0 cF4 sB0 sB4 cF0 cF4 sB0 sB4 cF0 c..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "African), all languages covered in IROKO BENCH are part of its pre-training. We found Africa-centric MLM to perform bet- ter on average than massively multilingual mod- els like XLM-R-large. Serengeti..."
+      }
+    ],
+    "time_taken": 1.88
+  },
+  {
+    "question": "What is the main contribution of the 'No Language Left Behind' project?",
+    "answer": "The main contribution of the 'No Language Left Behind' project is to scale human-centered machine translation for low-resource languages, with a focus on assessing potential impact and risks on respective language communities.",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "In tandem with these considerations, deciding which languages to include in the final list ultimately came down to assessing the potential impact we might have on the respective low-resource language ..."
+      },
+      {
+        "source": "Generative AI and Large Language Models in Language Preservation_  Opportunities and Challenges.pdf",
+        "text": "munication but its culture and tradition which is very diverse. However, the progress of globalization, technological change, and social change has led to the extinction of many languages, and many la..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "No Language Left Behind: Scaling Human-Centered Machine Translation NLLB Team, Marta R. Costa-juss\u00e0 \u2217, James Cross \u2217, Onur \u00c7elebi \u2217, Maha Elbayad \u2217, Kenneth Heafield \u2217, Kevin Heffernan \u2217, Elahe Kalbas..."
+      },
+      {
+        "source": "Generative AI and Large Language Models in Language Preservation_  Opportunities and Challenges.pdf",
+        "text": "surrounding ownership and representation[5], [6]. This article seeks to explore the opportunities that artificial intelligence offers for language preservation and critically examine the challenges th..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "The benefits of a technological intervention like NLLB needs to be carefully weighed against the costs and risks it might incur on low-resource language groups and other stakeholders. 129..."
+      }
+    ],
+    "time_taken": 2.55
+  },
+  {
+    "question": "How does 'AfriCOMET' improve upon standard COMET metrics?",
+    "answer": "AfriCOMET surpasses COMET22 across all three correlation coefficients in the MT evaluation task, and significantly outperforms CometKiwi system in QE. AfriCOMET- MTL shows a slight edge over COMET22 in the Pearson correlation coefficient.",
+    "citations": [
+      "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf",
+        "text": "dataset is not utilized in the development (training or validation) of the AfriCOMET or AfriCOMET- QE systems. As showcased in Table 19, in the MT evaluation task, AfriCOMET-STL surpasses the cutting-..."
+      },
+      {
+        "source": "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf",
+        "text": "AfriMTE and AfriCOMET: Enhancing COMET to Embrace Under-resourced African Languages Jiayi Wang1, David Ifeoluwa Adelani1,2, Sweta Agrawal3,\u2217, Marek Masiak1,\u2217,\u2020, Ricardo Rei4,5,6, Eleftheria Briakou3, ..."
+      },
+      {
+        "source": "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf",
+        "text": "N-gram MatchingEmbedding-basedLLM Prompting Learned COMET Metrics SacreBLEU chrf++BERTScore GPT-4 Baseline Single Task(Ours) Multi Task(Ours) LP COMET22XLM-R-L InfoXLM-L AfroXLM-R-L\u2605 AfroXLM-R-L\u2605..."
+      },
+      {
+        "source": "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf",
+        "text": "16 and a gradient accumulation across 2 batches. We follow the default settings for other hyper- parameters of the COMET metric.9 3.1.3 Evaluation Pearson, Spearman-rank, and Kendall-rank are widely-u..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "Twi had worse correlation with human judgement (i.e., 0.279 for Pearson, and 0.060 for Spearman) (Wang et al., 2024). We provide further analysis of the COMET scores in Appendix A.3. 3.4 LLMs used for..."
+      }
+    ],
+    "time_taken": 3.38
+  },
+  {
+    "question": "Compare the approaches of 'Masakhane' and 'NLLB' regarding community involvement.",
+    "answer": "Both Masakhane and NLLB prioritize community involvement. Masakhane focuses on building a community to increase the visibility of MT systems in Africa, with both dataset building and standardized code development. NLLB aims to foster transparency by open-sourcing its research, avoiding duplication of effort. Both projects emphasize collaborations with local institutions and community members to understand their needs and concerns.",
+    "citations": [
+      "Neural Machine Translation for Low-Resource Languages.pdf",
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Neural Machine Translation for Low-Resource Languages.pdf",
+        "text": "process. Community involvement: A recent development is a group of like-minded researchers coming together to increase the visibility of MT systems in the context of languages used in a particular reg..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "the dual intent to foster transparency and avoid a duplication of effort, we decided early on that we were going to open source NLLB. This way, the research community at large 11..."
+      },
+      {
+        "source": "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf",
+        "text": "What is community? an evidence-based definition for participatory public health.American Journal of Public Health, 91(12):1929\u20131938. El Moatez Billah Nagoudi, AbdelRahim Elmadany, Ahmed El-Shangiti, a..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "2021). To this end, being reflexive in our approach and prioritizing relationships with local institutions and community members to better understand their needs and concerns is of utmost importance i..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "Four questions have been carefully defined to cater to all possible domains intertwined with the research objectives by forming a structured set of interrogative statements whose answers are meant to ..."
+      }
+    ],
+    "time_taken": 3.39
+  },
+  {
+    "question": "What common biases do 'CultureVLM' and 'Global MMLU' identify in multilingual models?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+        "text": "The goal of this work is to study how cultural biases in translated datasets influence the per- formance of widely-used multilingual models. To achieve this, we worked with 200 professional compensate..."
+      },
+      {
+        "source": "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+        "text": "of data: Global-MMLU Annotated  , Global-MMLU Culturally-Agnostic (CA  ) and Global-MMLU Culturally-Sensitive (CS  ). By comparing model performance across these three subsets, we aim to address the f..."
+      },
+      {
+        "source": "CultureVLM_ Characterizing and Improving Cultural Understanding of Vision-Language Models for over 100 Countries.pdf",
+        "text": "Dataset Country Concept Image Question Multi. MaRVL (Liu et al., 2021) 5 454 4,914 5,670 \u2717 CVQA (Romero et al., 2024) 28 - 4,560 9,044 \u2717 CulturalVQA (Nayak et al., 2024) 11 - 2,328 2,328 \u2717 GlobalRG (B..."
+      },
+      {
+        "source": "A Survey on Multilingual Large Language Models_ Corpora, Alignment, and  Bias.pdf",
+        "text": "5.1 Bias Category Bias in MLLMs can arise from factors such as un- moderated training data [129], differences in model design [12], and the presence of biased multilin- gual word embedding representat..."
+      },
+      {
+        "source": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+        "text": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks D. Das, and J. Wei. Language models are multilingual chain-of-thought reasoners. InThe Eleventh International Conference on Learning Repre..."
+      }
+    ],
+    "time_taken": 2.29
+  },
+  {
+    "question": "Synthesize the findings on 'Code-Switching' from Terblanche (2024) and any other relevant paper.",
+    "answer": "Since there is no context provided for Terblanche (2024), I will only synthesize the findings on 'Code-Switching' from the provided papers.\n\n{\n  \"answer\": \"Insufficient Evidence\",\n  \"source_files\": []\n}",
+    "citations": [
+      "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "dress code-switched data scarcity in low-resource languages while emphasising the need for native speakers in the loop. Increasing data availability is at the center of developinglanguagemodelsthatser..."
+      },
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "cangeneratecode-switchedtextthroughprompting. They evaluated a variety of prompt templates and found that those explicitly defining code-switching gave the highest success rate. However, they also hig..."
+      },
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "Vu. 2016. Challenges of Computational Process- ingof Code-Switching. EMNLP2016 - 2ndWork- shop on Computational Approaches to Code Switching, CS 2016 - Proceedings of the Work- shop, (1980):1\u201311. Matt..."
+      },
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "velop a corpus from a set of radio broadcasts to evaluate the implication of code-switching in ASR systems. This dataset is publicly available. This brief review of the state of code-switching researc..."
+      },
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "A. Raghuveer. 2022. CoCoa: An encoder- decoder model for controllable code-switched generation. Proceedings of the 2022 Confer- ence on Empirical Methods in Natural Language Processing, pages 2466\u2013247..."
+      }
+    ],
+    "time_taken": 2.96
+  },
+  {
+    "question": "Do 'AfroBench' and 'IrokoBench' agree on the performance of GPT-4 for African languages?",
+    "answer": "No, they do not agree on the performance of GPT-4 for African languages. AfroBench results show that GPT-4o has a performance range of 55.3 to 64.9%, while IrokoBench results show a range of 39.6 to 70B (with an average of 58.4\u00b16.0).",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+      "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "scores of 14 languages in AFROBENCH -LITE. Our result shows that performance correlates with the available monolingual text on the web (Kudugunta et al., 2023). We find that Swahili (swa) with over 2...."
+      },
+      {
+        "source": "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+        "text": "D AfroBench Evaluation with Confidence Scores We computed 95% confidence intervals AfroBench results to quantify statistical significance. The cal- culation was based on the results of 5 prompts for e..."
+      },
+      {
+        "source": "LLMs in the Loop_ Leveraging Large Language Model Annotations for Active Learning in Low-Resource Languages.pdf",
+        "text": "Claude 3 Sonnet 92.23 93.21 86.2 66.44 88.65 Claude 3 Opus 97.86 94.64 92.87 95.1 89.2 LLM Evaluation ResultsFor subsequent experiments, GPT-4-Turbo was se- lected due to its consistently superior per..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "GPT-4o 55.3 49.6 64.362.959.7 58.4\u00b16.0 60.055.8 59.0 39.6 59.654.8\u00b18.7 46.749.848.0 49.5 49.648.7\u00b11.3 Table 7: Ablation results: Effect of using different prompts (t1, t2, t3, t4, and t5) for IROKO BE..."
+      },
+      {
+        "source": "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+        "text": "African), all languages covered in IROKO BENCH are part of its pre-training. We found Africa-centric MLM to perform bet- ter on average than massively multilingual mod- els like XLM-R-large. Serengeti..."
+      }
+    ],
+    "time_taken": 4.21
+  },
+  {
+    "question": "How do 'NileChat' and 'Jawaher' differ in their approach to Arabic dialects?",
+    "answer": "NileChat and Jawaher differ in their approach to Arabic dialects. NileChat uses a shared multilingual corpus that includes MSA data during the SFT phase, while Jawaher is manually curated by native Arabic speakers with strong linguistic expertise from different countries. ",
+    "citations": [
+      "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+      "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+        "text": "all aiming to improve multilingual adaptation and cultural alignment in LLMs. 3 Jawaher Jawaher consists of Arabic proverbs paired with their idiomatic or literal English translations, along with expl..."
+      },
+      {
+        "source": "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+        "text": "damma on the first and second consonants is a noun which means \"books.\" \\fathah\\behmedial\\kasrah\\tehmedial\\dammah\\kafinitial(kutiba): With a damma on the first consonant and a kasra on the second con-..."
+      },
+      {
+        "source": "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf",
+        "text": "an instruction/response format. Table B.1 compares the SFT model with models fine-tuned on Egyptian and Moroccan datasets individually, as well as with our final merged model, NileChat. NileChat perfo..."
+      },
+      {
+        "source": "On The Origin of Cultural Biases in Language Models_ From Pre-training Data to Linguistic Phenomena.pdf",
+        "text": "gional languages led to the development of contem- porary Arabic dialects. For example, the dialects in countries of the Levant region (i.e, Lebanon, Syria, Palestine, Jordan) have been shaped by infl..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "Custom NLLB-200 Directions spBLEU chrF + + #best spBLEU chrF + + #best {Arabic dialects}-eng_Latn 34.1 (4.7) 56.7 (3.7) 0 44.4 (3.8) 64.1 (3.1) 7 {Arabic dialects}-fra_Latn 19.9 (1.4) 41.0 (1.3) 0 39...."
+      }
+    ],
+    "time_taken": 4.17
+  },
+  {
+    "question": "What does the corpus say about 'Quantum Computing in Yoruba'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf",
+        "text": "of the generated Yoruba\u2013English sentences: Topic: information technology; keyword: spreadsheet;Pronoun: indefinite;Tense: future; Use negative particle: Yes Example 1: Moyo niyo koyo relaxen, infacten..."
+      },
+      {
+        "source": "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf",
+        "text": "mutually intelligible. Igbo is written using the O . nwu. orthography (Ohiri-Aniche, 2007). O . nwu. consists of 28 consonants and 8 vowels. Standard Igbo consists of eight vowels, and thirty consonan..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "which language? Modern Physics Letters B , 34(06):2050086, 2020. Aditya Siddhant, Ankur Bapna, Yuan Cao, Orhan Firat, Mia Xu Chen, Sneha Kudugunta, Naveen Arivazhagan, and Yonghui Wu. Leveraging monol..."
+      },
+      {
+        "source": "A Survey on Multilingual Large Language Models_ Corpora, Alignment, and  Bias.pdf",
+        "text": "Zihan Qiu is majoring in com- puter science and technology at the School of Information Science and Technology, Beijing Foreign Studies University. Her main re- search interests include Multilin- gual..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "Cairo, Egypt, April 14-20, 2015, Proceedings, Part II 16 , pages 565\u2013582. Springer, 2015. [104] Akintoba Emmanuel Akinwonm. Development of a prosodic read speech syllabic corpus of the yoruba language..."
+      }
+    ],
+    "time_taken": 2.15
+  },
+  {
+    "question": "Does the 'WAXAL' paper discuss speech synthesis for Martian languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "Localising SA official languages.pdf",
+        "text": "s . u i o . n o / o p u s, in \u2018Proceedings of the Fourth International Conference on Language Resources and Evaluation (LREC\u2019/zero.osf/four.osf)\u2019, Euro- pean Language Resources Association (ELRA), Lis..."
+      },
+      {
+        "source": "WAXAL_ A Large-Scale Multilingual African Language Speech Corpus.pdf",
+        "text": "https://huggingface.co/datasets/google/WaxalNLP under the permissive CC-BY-4.0 license to catalyze research, enable the development of inclusive technologies, and serve as a vital resource for the dig..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "languages. In Proceedings of the 13th Conference of the Association for Machine Trans- lation in the Americas (Volume 1: Research Track) , pages 54\u201367, 2018. [71] Ife Adebara, AbdelRahim Elmadany, and..."
+      },
+      {
+        "source": "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf",
+        "text": "2022. [337] Laiba Mehnaz, Debanjan Mahata, Rakesh Gosangi, Uma Sushmitha Gunturi, Riya Jain, Gauri Gupta, Amardeep Kumar, Isabelle G Lee, Anish Acharya, and Rajiv Shah. Gupshup: Sum- marizing open-dom..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "detection task was also carried out in two studies [85, 86]. Even though most studies tend to involve text processing, quite a substantial number of studies also investigated speech processing in Yor`..."
+      }
+    ],
+    "time_taken": 2.3
+  },
+  {
+    "question": "Find evidence for the claim that 'LLMs are perfect translators'.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "Understanding the Capabilities and Limitations of Large Language Models for Cultural Commonsense.pdf",
+        "text": "the highest performance, and the use of other lan- guages can lead to up to 20% absolute drop in accuracy. Moreover, using the native language of a certain culture to ask for commonsense facts from th..."
+      },
+      {
+        "source": "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+        "text": "ases toward Western, Anglo-centric, or Ameri- can cultures, with performance on English data consistently surpassing that of other languages. This reveals a persistent cultural gap in LLMs, which comp..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "complementary training, translators seem to face similar difficulties when deciding whether certain items qualify as slurs or as nontoxic language. This is particularly salient in the case of some rac..."
+      },
+      {
+        "source": "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+        "text": "tions and explanations in both English and Arabic; for instance, the Libyan proverb \\noonisolated\\aleffinal\\behmedial\\ainmedial\\thehinitial \\sheenfinal\\noonmedial\\hahmedial\\laminitial\\alefisolated \\da..."
+      },
+      {
+        "source": "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf",
+        "text": "of the Eighth Conference on Machine Translation , pages 1\u201342. Sneha Kudugunta, Isaac Caswell, Biao Zhang, Xavier Garc\u00eda, Christopher A. Choquette-Choo, Katherine Lee, Derrick Xin, Aditya Kusupati, Rom..."
+      }
+    ],
+    "time_taken": 2.03
+  },
+  {
+    "question": "What is the specific learning rate used in the 'DeepSeek-V3' paper?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "retrieved_chunks": [
+      {
+        "source": "CultureVLM_ Characterizing and Improving Cultural Understanding of Vision-Language Models for over 100 Countries.pdf",
+        "text": "to the original hyperparameters, except for appropriately adjusting the batch size to accommodate the GPU memory capacity. For LLaV A-1.5, a learning rate of2 \u00d7 10\u22125 is used, with no weight decay appl..."
+      },
+      {
+        "source": "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+        "text": "are released by the academic community and these benchmarks are created from the public \u2021https://r0bk.github.io/killedbyllm/ 11..."
+      },
+      {
+        "source": "Targeted Multilingual Adaptation for Low-resource Language Families.pdf",
+        "text": "dimension, and v is the vocabulary size. Note this estimate is approximately proportional to the total number of parameters. Training steps vs. vocabulary size Our multi- variable regression analysis ..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "30. https://cleanspeak.com/ 31. https://www.perspectiveapi.com/ 32. https://cyber.harvard.edu/publication/2020/principled-ai 81..."
+      },
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "encoder-decoder model in which we replace the Feed Forward Network (FFN) layer in every 4th Transformer block with a Sparsely Gated Mixture of Experts layer containing 128 experts. We use model dimens..."
+      }
+    ],
+    "time_taken": 1.69
+  },
+  {
+    "question": "Does the corpus contain the personal email address of the author 'Adebara'?",
+    "answer": "Insufficient Evidence",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+      "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A Systematic Review of a Decade of Progress and Prospects.pdf"
+    ],
+    "retrieved_chunks": [
+      {
+        "source": "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+        "text": "Corpus Name Citation # Directions # Languages AAU Ethiopian Languages Abate et al. (2018) 3 4 AI4D Degila et al. (2020); Siminyu et al. (2021) 3 5 DGT Tiedemann (2012) 94 24 ECB Tiedemann (2012) 74 19..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "Olawuyi. English to yoruba short message service speech and text translator for android phones. International Journal of Speech Technology, 24(4):979\u2013991, 2021. 39..."
+      },
+      {
+        "source": "Cheetah_ Natural Language Generation for 517 African Languages.pdf",
+        "text": "Translate English to Nyankore Chrf 40.43 \u00b10.21 38.38\u00b10.13 36.8\u00b10.07 40.36\u00b10.17 43.67\u00b10.32 Translate English to Ateso (salt) Chrf 41.98 \u00b10.13 38.91\u00b10.05 39.76\u00b11.35 42.1\u00b10.42 42.96\u00b10.48 Translate Lugbar..."
+      },
+      {
+        "source": "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf",
+        "text": "Dataset Language Open-source Annotated/translatedCode-mixed Source Abubakar et al. (2021) Hausa \u0017 annotated \u0013 Twitter Ogbuju and Onyesolu (2019)Igbo \u0017 translated \u0017 General Umoh et al. (2020) Igbo \u0017 an..."
+      },
+      {
+        "source": "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A  Systematic Review of a Decade of Progress and Prospects.pdf",
+        "text": "the most prominent, diverse, and primary component of the Nigeria-Congo language family [45]. Going down the language tree, it is seen that the Yor` ub\u00b4 a language stems from the Atlantic- Congo langu..."
+      }
+    ],
+    "time_taken": 3.3
+  }
+]

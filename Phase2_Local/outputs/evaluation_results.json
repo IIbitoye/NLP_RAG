@@ -1,0 +1,153 @@
+[
+  {
+    "question": "What specific failures does the 'AfroBench' paper identify in current LLMs?",
+    "answer": "The 'AfroBench' paper identifies that there are large gaps in performance between high-resource languages, such as English, and African languages across most tasks. This performance disparity is attributed to the availability of monolingual data resources, indicating that current LLMs struggle with African languages due to insufficient data and resources.",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf"
+    ],
+    "time_taken": 2.29
+  },
+  {
+    "question": "According to Conneau (2020), how does XLM-R compare to mBERT?",
+    "answer": "According to Conneau (2020), XLM-R outperforms mBERT on cross-lingual transfer tasks. Specifically, XLM-R achieves 80.9% accuracy on XNLI, outperforming mBERT by 14.6% average accuracy. On low-resource languages like Swahili and Urdu, XLM-R outperforms mBERT by 23.5% and 15.8%, respectively.",
+    "citations": [
+      "Unsupervised Cross-Lingual Representation.pdf"
+    ],
+    "time_taken": 2.06
+  },
+  {
+    "question": "What are the three main challenges in preserving cultural identity according to Anik (2025)?",
+    "answer": "The three main challenges in preserving cultural identity according to Anik (2025) are: 1) AI-driven translation models often fail to capture cultural nuances, idiomatic expressions, and historical significance, 2) globalization and the dominance of major languages place many languages at risk of extinction, and 3) existing translation models prioritize efficiency over cultural authenticity, leading to translations that marginalize linguistic diversity.",
+    "citations": [
+      "Preserving Cultural Identity with Context-Aware Translation Through  Multi-Agent AI Systems.pdf"
+    ],
+    "time_taken": 1.94
+  },
+  {
+    "question": "How does the 'Cheetah' paper propose to handle 517 African languages?",
+    "answer": "The 'Cheetah' paper proposes to handle 517 African languages by developing a massively multilingual natural language generation (NLG) language model specifically designed for these languages. Cheetah is trained using a 42G multi-domain corpus across 517 African languages and language varieties, covering languages spoken in 50 of 54 African countries and written with five scripts. The model leverages a vast corpus of text data collected from diverse sources, including news articles, health documents, religious texts, legal documents, and social media feeds, to learn intricate linguistic information that characterizes each African language. This approach addresses the scarcity of NLG resources for African languages and aims to foster linguistic diversity, improve access to important information, and support language preservation.",
+    "citations": [
+      "Cheetah_ Natural Language Generation for 517 African Languages.pdf"
+    ],
+    "time_taken": 2.85
+  },
+  {
+    "question": "What metrics were used to evaluate the 'NaijaSenti' corpus?",
+    "answer": "The 'NaijaSenti' corpus was evaluated using benchmark experiments on Twitter sentiment dataset with state-of-the-art pre-trained language models and transfer learning. The results indicated that language-specific models and language-adaptive fine-tuning performed the best on average.",
+    "citations": [
+      "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf"
+    ],
+    "time_taken": 1.43
+  },
+  {
+    "question": "Does the 'Localising SA official languages' paper recommend manual or automated collection?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.92
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described by Wu et al. (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.33
+  },
+  {
+    "question": "List the datasets used in the 'IrokoBench' benchmark.",
+    "answer": "The datasets used in the 'IrokoBench' benchmark are AfriXNLI for natural language inference, AfriMGSM for mathematical reasoning, and AfriMMLU for multi-choice knowledge-based question answering.",
+    "citations": [
+      "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf"
+    ],
+    "time_taken": 1.65
+  },
+  {
+    "question": "What is the main contribution of the 'No Language Left Behind' project?",
+    "answer": "The main contribution of the 'No Language Left Behind' project is the development of datasets and models aimed at narrowing the performance gap between low and high-resource languages. This includes creating a conditional compute model based on Sparsely Gated Mixture of Experts, trained on data obtained with novel and effective data mining techniques tailored for low-resource languages. The project also focuses on understanding the low-resource translation problem from the perspective of native speakers, creating training data to move low-resource languages towards high-resource, and evaluating every language they aim to translate.",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "time_taken": 2.14
+  },
+  {
+    "question": "How does 'AfriCOMET' improve upon standard COMET metrics?",
+    "answer": "AfriCOMET improves upon standard COMET metrics by enhancing the evaluation for under-resourced African languages. It surpasses the cutting-edge COMET22 system across all three correlation coefficients and shows a slight edge over COMET22 in the Pearson correlation coefficient. Additionally, AfriCOMET-QE systems significantly outperform the state-of-the-art CometKiwi system. These improvements are achieved by creating a high-quality human evaluation dataset with simplified MQM guidelines and leveraging transfer learning from well-resourced DA data and an African-centric multilingual pre-trained encoder, AfroXLM-R.",
+    "citations": [
+      "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf"
+    ],
+    "time_taken": 2.87
+  },
+  {
+    "question": "Compare the approaches of 'Masakhane' and 'NLLB' regarding community involvement.",
+    "answer": "The 'Masakhane' project emphasizes community involvement by creating a barrier-free open access platform for hands-on NLP experiences with African languages. It fosters community support through weekly meetings, an active Slack workspace, and a GitHub repository, allowing members to connect and collaborate despite geographical distances. No academic prerequisites are required, making it accessible to a broader community [source_28]. In contrast, 'NLLB' focuses on community involvement by making datasets and models publicly available to encourage innovation through community production and collaboration. It highlights the importance of interdisciplinary collaboration and aims to include scholars from underrepresented fields to address language disparities [source_13].",
+    "citations": [
+      "Masakhane -- Machine Translation For Africa.pdf",
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "time_taken": 2.66
+  },
+  {
+    "question": "What common biases do 'CultureVLM' and 'Global MMLU' identify in multilingual models?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.82
+  },
+  {
+    "question": "Synthesize the findings on 'Code-Switching' from Terblanche (2024) and any other relevant paper.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.03
+  },
+  {
+    "question": "Do 'AfroBench' and 'IrokoBench' agree on the performance of GPT-4 for African languages?",
+    "answer": "AfroBench and IrokoBench do not agree on the performance of GPT-4 for African languages. AfroBench indicates that proprietary models like GPT-4o achieve better performance than open models on African languages, with a significant score improvement over the best-performing open model, Gemma 2 27B [source_33]. On the other hand, IrokoBench does not specifically mention GPT-4's performance but highlights that Africa-centric models perform better on average than massively multilingual models like XLM-R-large [source_08].",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+      "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf"
+    ],
+    "time_taken": 3.07
+  },
+  {
+    "question": "How do 'NileChat' and 'Jawaher' differ in their approach to Arabic dialects?",
+    "answer": "'NileChat' focuses on enhancing Arabic dialects through controlled synthetic data generation and retrieval-augmented pre-training, specifically for Moroccan Darija and Egyptian Arabic, including Arabizi variants. In contrast, 'Jawaher' provides a curated collection of Arabic proverbs from 20 different Arabic varieties, paired with English translations and explanations, to ensure a diverse representation of dialects and cultural contexts.",
+    "citations": [
+      "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf",
+      "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf"
+    ],
+    "time_taken": 3.39
+  },
+  {
+    "question": "What does the corpus say about 'Quantum Computing in Yoruba'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.92
+  },
+  {
+    "question": "Does the 'WAXAL' paper discuss speech synthesis for Martian languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [
+      "WAXAL_ A Large-Scale Multilingual African Language Speech Corpus.pdf"
+    ],
+    "time_taken": 1.25
+  },
+  {
+    "question": "Find evidence for the claim that 'LLMs are perfect translators'.",
+    "answer": "Insufficient Evidence. The context does not provide any information or evidence supporting the claim that 'LLMs are perfect translators'. Instead, it discusses the challenges and limitations of LLMs in multilingual scenarios, particularly for languages not covered in their pre-training, and the reliance on machine translation as a substitute for human translation.",
+    "citations": [
+      "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf",
+      "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf",
+      "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf"
+    ],
+    "time_taken": 2.17
+  },
+  {
+    "question": "What is the specific learning rate used in the 'DeepSeek-V3' paper?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.28
+  },
+  {
+    "question": "Does the corpus contain the personal email address of the author 'Adebara'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.92
+  }
+]

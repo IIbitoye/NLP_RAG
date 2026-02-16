@@ -1,0 +1,176 @@
+[
+  {
+    "question": "What is Masakhane?",
+    "answer": "Masakhane is a project that aims to put African language Machine Translation into the world map, covering over 38 African languages and resulting in multiple publications.",
+    "citations": [
+      "Global MMLU_ Understanding and Addressing Cultural and Linguistic Biases  in Multilingual Evaluation.pdf",
+      "Neural Machine Translation for Low-Resource Languages.pdf"
+    ],
+    "time_taken": 4.4
+  },
+  {
+    "question": "What are the main findings of the AfroBench paper?",
+    "answer": "Closed models such as GPT-4o and Gemini-1.5 pro achieve better performance than the best open model, Gemma 2 27B with differences of +12 or more points on average performance.",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf"
+    ],
+    "time_taken": 3.28
+  },
+  {
+    "question": "How does 'NLLB' handle low-resource languages?",
+    "answer": "NLLB-200 improves the performance of low-resource languages by integrating various datasets and techniques, including automatic and human evaluation, detection of catastrophic and toxic translations, and multilingual transfer.",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+      "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A Systematic Review of a Decade of Progress and Prospects.pdf"
+    ],
+    "time_taken": 2.97
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described in the context?What specific failures does the 'AfroBench' paper identify in current LLMs?",
+    "answer": "The 'Bitter Lesson' is a lesson learned from 2,000+ multilingual benchmarks.",
+    "citations": [
+      "The Bitter Lesson Learned from 2,000+ Multilingual Benchmarks.pdf",
+      "A Survey on Large Language Models with Multilingualism_ Recent Advances and New Frontiers.pdf"
+    ],
+    "time_taken": 3.61
+  },
+  {
+    "question": "According to Conneau (2020), how does XLM-R compare to mBERT?",
+    "answer": "XLM-R performs on par with mBERT, but without the use of a linear-chain CRF on top of their representations.",
+    "citations": [
+      "Unsupervised Cross-Lingual Representation.pdf"
+    ],
+    "time_taken": 2.98
+  },
+  {
+    "question": "What are the three main challenges in preserving cultural identity according to Anik (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.91
+  },
+  {
+    "question": "How does the 'Cheetah' paper propose to handle 517 African languages?",
+    "answer": "We discuss below some use cases for Cheetah and offer a number of broad impacts. 1. Cheetah aims to address the lack of access to technology in about 90% of the world\u2019s languages, which automatically discriminates against native speakers of those languages. More precisely, it does so by focusing on Africa. To the best of our knowledge, Chee- tah is the first massively multilingual PLM de- veloped for African languages and language varieties. A model with knowledge of 517 African languages, is by far the largest to date for African NLP.",
+    "citations": [
+      "Cheetah_ Natural Language Generation for 517 African Languages.pdf",
+      "Where Are We? Evaluating LLM Performance on African Languages.pdf"
+    ],
+    "time_taken": 4.55
+  },
+  {
+    "question": "What metrics were used to evaluate the 'NaijaSenti' corpus?",
+    "answer": "Fleiss kappa (\u03ba) reliability measure",
+    "citations": [
+      "NaijaSenti_ A Nigerian Twitter Sentiment Corpus for Multilingual Sentiment Analysis.pdf"
+    ],
+    "time_taken": 3.08
+  },
+  {
+    "question": "Does the 'Localising SA official languages' paper recommend manual or automated collection?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.79
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described by Wu et al. (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.97
+  },
+  {
+    "question": "List the datasets used in the 'IrokoBench' benchmark.",
+    "answer": "Serengeti and AfroXLMR-15",
+    "citations": [],
+    "time_taken": 1.88
+  },
+  {
+    "question": "What is the main contribution of the 'No Language Left Behind' project?",
+    "answer": "The main contribution of the 'No Language Left Behind' project is to scale human-centered machine translation for low-resource languages, with a focus on assessing potential impact and risks on respective language communities.",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "time_taken": 2.55
+  },
+  {
+    "question": "How does 'AfriCOMET' improve upon standard COMET metrics?",
+    "answer": "AfriCOMET surpasses COMET22 across all three correlation coefficients in the MT evaluation task, and significantly outperforms CometKiwi system in QE. AfriCOMET- MTL shows a slight edge over COMET22 in the Pearson correlation coefficient.",
+    "citations": [
+      "AfriMTE and AfriCOMET_ Enhancing COMET to Embrace Under-resourced African Languages.pdf"
+    ],
+    "time_taken": 3.38
+  },
+  {
+    "question": "Compare the approaches of 'Masakhane' and 'NLLB' regarding community involvement.",
+    "answer": "Both Masakhane and NLLB prioritize community involvement. Masakhane focuses on building a community to increase the visibility of MT systems in Africa, with both dataset building and standardized code development. NLLB aims to foster transparency by open-sourcing its research, avoiding duplication of effort. Both projects emphasize collaborations with local institutions and community members to understand their needs and concerns.",
+    "citations": [
+      "Neural Machine Translation for Low-Resource Languages.pdf",
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf"
+    ],
+    "time_taken": 3.39
+  },
+  {
+    "question": "What common biases do 'CultureVLM' and 'Global MMLU' identify in multilingual models?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 2.29
+  },
+  {
+    "question": "Synthesize the findings on 'Code-Switching' from Terblanche (2024) and any other relevant paper.",
+    "answer": "Since there is no context provided for Terblanche (2024), I will only synthesize the findings on 'Code-Switching' from the provided papers.\n\n{\n  \"answer\": \"Insufficient Evidence\",\n  \"source_files\": []\n}",
+    "citations": [
+      "Prompting Towards Alleviating Code-Switched Data Scarcity in  Under-Resourced Languages with GPT as a Pivot.pdf"
+    ],
+    "time_taken": 2.96
+  },
+  {
+    "question": "Do 'AfroBench' and 'IrokoBench' agree on the performance of GPT-4 for African languages?",
+    "answer": "No, they do not agree on the performance of GPT-4 for African languages. AfroBench results show that GPT-4o has a performance range of 55.3 to 64.9%, while IrokoBench results show a range of 39.6 to 70B (with an average of 58.4\u00b16.0).",
+    "citations": [
+      "AfroBench_ How Good are Large Language Models on African Languages?.pdf",
+      "IrokoBench_ A New Benchmark for African Languages in the Age of Large  Language Models.pdf"
+    ],
+    "time_taken": 4.21
+  },
+  {
+    "question": "How do 'NileChat' and 'Jawaher' differ in their approach to Arabic dialects?",
+    "answer": "NileChat and Jawaher differ in their approach to Arabic dialects. NileChat uses a shared multilingual corpus that includes MSA data during the SFT phase, while Jawaher is manually curated by native Arabic speakers with strong linguistic expertise from different countries. ",
+    "citations": [
+      "Jawaher_ A Multidialectal Dataset of Arabic Proverbs for LLM  Benchmarking.pdf",
+      "NileChat_ Towards Linguistically Diverse and Culturally Aware LLMs for Local Communities.pdf"
+    ],
+    "time_taken": 4.17
+  },
+  {
+    "question": "What does the corpus say about 'Quantum Computing in Yoruba'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 2.15
+  },
+  {
+    "question": "Does the 'WAXAL' paper discuss speech synthesis for Martian languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 2.3
+  },
+  {
+    "question": "Find evidence for the claim that 'LLMs are perfect translators'.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 2.03
+  },
+  {
+    "question": "What is the specific learning rate used in the 'DeepSeek-V3' paper?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.69
+  },
+  {
+    "question": "Does the corpus contain the personal email address of the author 'Adebara'?",
+    "answer": "Insufficient Evidence",
+    "citations": [
+      "No Language Left Behind_ Scaling Human-Centered Machine Translation.pdf",
+      "Bridging Gaps in Natural Language Processing for Yoru\u0300ba\u0301_ A Systematic Review of a Decade of Progress and Prospects.pdf"
+    ],
+    "time_taken": 3.3
+  }
+]
