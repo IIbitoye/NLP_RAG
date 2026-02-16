@@ -90,7 +90,8 @@ pip install -r requirements.txt
 
 ## 5. Configure Environment Variables
 
-# The system requires an OpenAI API key to run! (AI Mod dev TA's can run the file completely using my submitted zipped folder)
+# The system requires an OpenAI API key to run! 
+#(AI Mod dev TA's can run the file completely using my submitted zipped folder)
 
 Create a file named .env in the root directory
 
