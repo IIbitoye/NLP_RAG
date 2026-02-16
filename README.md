@@ -1,7 +1,8 @@
 # Personal Research Portal (PRP) 
 **Author:** Iteoluwa Ibitoye
+
 **Course:** AI Systems Management
-**Date:** Feb 14, 2026
+
 
 # 🌍 Low-Resource NLP RAG: A Research Assistant for African Languages
 
