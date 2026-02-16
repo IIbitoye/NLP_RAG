@@ -131,3 +131,26 @@ If you want to rebuild the database from scratch (e.g., if I added new PDFs to d
 python src/ingest/ingest.py
 ```
 Warning: This will delete and recreate the data/chroma_db folder.
+
+### 📂 Alternative Version: Local Execution (No API Keys)
+
+For graders or users who wish to run this system **locally** without OpenAI API keys, a fully local implementation is provided in the `Phase2_Local/` folder.
+
+**Path:** `./Phase2_Local/`
+
+Everything else runs the same but the major differences are below
+**Key Differences:**
+* **Embeddings:** HuggingFace (`all-MiniLM-L6-v2`) instead of OpenAI.
+* **LLM:** Ollama (`Llama 3.2`) instead of GPT-4o.
+* **Performance:** Faster and free, but with lower reasoning accuracy due to model size (3B vs 1T parameters).
+
+**How to Run the Local Version:**
+1.  Navigate to the folder: `cd Phase2_Local`
+2.  Create a virtual env and install dependencies:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+3.  Ensure Ollama is running (`ollama serve`).
+4.  Run `python src/RAG/query.py`. for your personal queries.
