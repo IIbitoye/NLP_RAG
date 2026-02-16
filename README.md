@@ -33,7 +33,7 @@ Latency	~2.7s	Average end-to-end processing time.
 ## 📂 Project Structure
 ```text
 Phase 2_iibitoye/
-├── data/
+├── data/ raw/
 │   ├── data_manifest.csv       # Metadata (Filename -> Citation mapping)
 ├── logs/
 │   ├── retrieval_logs.json     # Detailed logs including retrieved chunks for auditing
