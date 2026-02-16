@@ -132,11 +132,40 @@ python src/ingest/ingest.py
 ```
 Warning: This will delete and recreate the data/chroma_db folder.
 
-### 📂 Alternative Version: Local Execution (No API Keys)
+# 📂 Alternative Version: Local Execution (No API Keys)
 
 For graders or users who wish to run this system **locally** without OpenAI API keys, a fully local implementation is provided in the `Phase2_Local/` folder.
 
 **Path:** `./Phase2_Local/`
+
+
+### **1. Architecture Note**
+This local version functions **identically** to the main submission (RAG Pipeline: Ingest $\rightarrow$ Retrieve $\rightarrow$ Generate). The only difference is the model components:
+* **Embeddings:** Uses `HuggingFace (all-MiniLM-L6-v2)` instead of `OpenAI`.
+* **LLM:** Uses `Ollama (Llama 3.2)` instead of `GPT-4o`.
+
+### **2. Setup Instructions**
+Since this version uses local models, it requires a different set of dependencies.
+
+**A. Prerequisites (One-Time Setup)**
+1.  **Install Ollama:** Download from [ollama.com](https://ollama.com).
+2.  **Pull the Model:** Open your terminal and run:
+    ```bash
+    ollama pull llama3.2
+    ```
+    *(This downloads the 2GB model weight file required for the LLM to run).*
+
+**B. Installation**
+Navigate to the local folder and install the specific local dependencies:
+```bash
+cd Phase2_Local
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt  # <--- Installs langchain-ollama, huggingface, etc.
+```
+3.  Ensure Ollama is running (`ollama serve`).
+4.  Run `python src/RAG/query.py`. for your personal queries.
+
 
 Everything else runs the same but the major differences are below
 **Key Differences:**
@@ -144,13 +173,3 @@ Everything else runs the same but the major differences are below
 * **LLM:** Ollama (`Llama 3.2`) instead of GPT-4o.
 * **Performance:** Faster and free, but with lower reasoning accuracy due to model size (3B vs 1T parameters).
 
-**How to Run the Local Version:**
-1.  Navigate to the folder: `cd Phase2_Local`
-2.  Create a virtual env and install dependencies:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
-3.  Ensure Ollama is running (`ollama serve`).
-4.  Run `python src/RAG/query.py`. for your personal queries.
