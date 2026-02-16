@@ -52,10 +52,10 @@ Phase 2_iibitoye/
 ├── requirements.txt            # Python dependencies
 └── .env                        # (Not uploaded) Contains OPENAI_API_KEY
 └──Phase2_Local                <-- Seperate but exactly identical folder using Ollama LLM's instead of OpenAi so there's  no need for API keys
-    ├── .env                  
-    ├── requirements.txt      <-- (Local Dependencies: ollama, huggingface)
-    │
-    ├── data/                 <-- (Local Data Copy)
+|   ├── .env                  
+|   ├── requirements.txt      <-- (Local Dependencies: ollama, huggingface)
+|   │
+|   ├── data/                 <-- (Local Data Copy)
     │   ├── raw/              <-- (Copy of PDFs)
     │   ├── data_manifest.csv <-- (Copy of Manifest)
     │   └── chroma_db/        <
@@ -68,8 +68,6 @@ Phase 2_iibitoye/
     │
     ├── outputs/              <-- (Local Results)
     └── logs/                 <-- (Local Logs)
-
-
 ```
 
 ## 🛠️ Setup & Installation
