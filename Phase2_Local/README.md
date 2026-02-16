@@ -21,11 +21,13 @@ Orchestration: LangChain (v0.3) utilizing langchain-ollama and langchain-hugging
 
 This system requires the Ollama runtime to manage local model weights.
 
-Bash
-# Ensure Ollama is installed (ollama.ai)
-ollama pull llama3.2
 
-2. Dependency Management
+# Ensure Ollama is installed (ollama.ai)
+```Bash
+ollama pull llama3.2
+```
+
+# 2. Dependency Management
 The local implementation utilizes a distinct dependency tree to avoid library conflicts with the OpenAI-based primary system.
 
 Bash
@@ -34,12 +36,12 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-3. Pipeline Execution
+# 3. Pipeline Execution
 Knowledge Ingestion:
 python src/ingest/ingest.py
 (Parses PDFs and initializes the ChromaDB instance using local embeddings.)
 
-Inference/Retrieval:
+# Inference/Retrieval:
 python src/RAG/query.py
 (Launches the interactive CLI for RAG-augmented querying.)
 
@@ -49,12 +51,12 @@ Data Privacy	Cloud-processed	100% Local / On-prem
 Inference Cost	Token-based (Variable)	Zero ($0.00)
 Reasoning Depth	High (Multi-step synthesis)	Moderate (Fact retrieval)
 Connectivity	Requires Internet	Offline-capable
-A Note on Evaluation Performance
 
+# A Note on Evaluation Performance
 As noted in the main report, the evaluation metrics for this local instance will show a slight variance in synthesis quality compared to the GPT-4o results. This is an expected result of reducing the model parameter count from >1T to 3B. However, the retrieval accuracy (the ability to find the correct document chunk) remains consistent across both implementations.
 
-##📂 Local Directory Structure
-Plaintext
+## 📂Local Directory Structure
+
 Phase2_Local/
 ├── requirements.txt      # Specific local dependencies (HuggingFace/Ollama)
 ├── data/
