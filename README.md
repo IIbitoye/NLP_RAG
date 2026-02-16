@@ -51,7 +51,27 @@ Phase 2_iibitoye/
 │   ├── evaluation_results.csv  # Clean Q&A Report (CSV format)
 ├── requirements.txt            # Python dependencies
 └── .env                        # (Not uploaded) Contains OPENAI_API_KEY
+└──Phase2_Local                <-- Seperate but exactly identical folder using Ollama LLM's instead of OpenAi so there's  no need for API keys
+    ├── .env                  
+    ├── requirements.txt      <-- (Local Dependencies: ollama, huggingface)
+    │
+    ├── data/                 <-- (Local Data Copy)
+    │   ├── raw/              <-- (Copy of PDFs)
+    │   ├── data_manifest.csv <-- (Copy of Manifest)
+    │   └── chroma_db/        <
+    │
+    ├── src/                  <-- (Local Code - Ollama)
+    │   ├── ingest/ingest.py  <-- (Uses HuggingFace Embeddings)
+    │   ├── RAG/rag.py        <-- (Uses Llama 3.2)
+    │   ├── RAG/query.py
+    │   └── eval/eval.py
+    │
+    ├── outputs/              <-- (Local Results)
+    └── logs/                 <-- (Local Logs)
+
+
 ```
+
 ## 🛠️ Setup & Installation
 
 Follow these steps to set up the project locally.
