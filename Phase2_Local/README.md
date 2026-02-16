@@ -30,11 +30,12 @@ ollama pull llama3.2
 # 2. Dependency Management
 The local implementation utilizes a distinct dependency tree to avoid library conflicts with the OpenAI-based primary system.
 
-Bash
+```
 cd Phase2_Local
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
 
 # 3. Pipeline Execution
 Knowledge Ingestion:
@@ -42,7 +43,9 @@ python src/ingest/ingest.py
 (Parses PDFs and initializes the ChromaDB instance using local embeddings.)
 
 # Inference/Retrieval:
+```
 python src/RAG/query.py
+```
 (Launches the interactive CLI for RAG-augmented querying.)
 
 ## 📊 Design Considerations & Trade-offs
@@ -58,6 +61,7 @@ As noted in the main report, the evaluation metrics for this local instance will
 ## 📂Local Directory Structure
 
 Phase2_Local/
+
 ├── requirements.txt      # Specific local dependencies (HuggingFace/Ollama)
 ├── data/
 │   ├── raw/              # PDF Corpus
