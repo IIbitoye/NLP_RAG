@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What specific failures does the 'AfroBench' paper identify in current LLMs?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.97
+  },
+  {
+    "question": "According to Conneau (2020), how does XLM-R compare to mBERT?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.19
+  },
+  {
+    "question": "What are the three main challenges in preserving cultural identity according to Anik (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.06
+  },
+  {
+    "question": "How does the 'Cheetah' paper propose to handle 517 African languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.92
+  },
+  {
+    "question": "What metrics were used to evaluate the 'NaijaSenti' corpus?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.83
+  },
+  {
+    "question": "Does the 'Localising SA official languages' paper recommend manual or automated collection?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.66
+  },
+  {
+    "question": "What is the 'Bitter Lesson' described by Wu et al. (2025)?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.56
+  },
+  {
+    "question": "List the datasets used in the 'IrokoBench' benchmark.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.01
+  },
+  {
+    "question": "What is the main contribution of the 'No Language Left Behind' project?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.65
+  },
+  {
+    "question": "How does 'AfriCOMET' improve upon standard COMET metrics?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 2.05
+  },
+  {
+    "question": "Compare the approaches of 'Masakhane' and 'NLLB' regarding community involvement.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.92
+  },
+  {
+    "question": "What common biases do 'CultureVLM' and 'Global MMLU' identify in multilingual models?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.51
+  },
+  {
+    "question": "Synthesize the findings on 'Code-Switching' from Terblanche (2024) and any other relevant paper.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.94
+  },
+  {
+    "question": "Do 'AfroBench' and 'IrokoBench' agree on the performance of GPT-4 for African languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.64
+  },
+  {
+    "question": "How do 'NileChat' and 'Jawaher' differ in their approach to Arabic dialects?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.69
+  },
+  {
+    "question": "What does the corpus say about 'Quantum Computing in Yoruba'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 1.22
+  },
+  {
+    "question": "Does the 'WAXAL' paper discuss speech synthesis for Martian languages?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.61
+  },
+  {
+    "question": "Find evidence for the claim that 'LLMs are perfect translators'.",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.6
+  },
+  {
+    "question": "What is the specific learning rate used in the 'DeepSeek-V3' paper?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.83
+  },
+  {
+    "question": "Does the corpus contain the personal email address of the author 'Adebara'?",
+    "answer": "Insufficient Evidence",
+    "citations": [],
+    "time_taken": 0.7
+  }
+]
