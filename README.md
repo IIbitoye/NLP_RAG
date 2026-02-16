@@ -90,7 +90,7 @@ pip install -r requirements.txt
 
 ## 5. Configure Environment Variables
 
-# The system requires an OpenAI API key to run.
+# The system requires an OpenAI API key to run!!
 
 Create a file named .env in the root directory
 
