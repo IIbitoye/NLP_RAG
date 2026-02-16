@@ -1,4 +1,4 @@
-# Personal Research Portal (PRP) - Phase 2
+# Personal Research Portal (PRP) 
 **Author:** Iteoluwa Ibitoye
 **Course:** AI Systems Management
 **Date:** Feb 14, 2026
