@@ -20,6 +20,15 @@ This is a retrieval-augmented generation (RAG) pipeline designed to answer resea
 * **Retrieval:** MMR (`k=12`, `fetch_k=20`) to reduce redundancy.
 * **Generation:** GPT-4o with strict "insufficient evidence" guardrails.
 
+📊 Evaluation Results
+The system was evaluated on a diverse set of 20 queries (Direct Fact Retrieval, Multi-Paper Synthesis, and Hallucination Tests).
+
+Metric	Score	Notes
+Success Rate	90% (18/20)	High recall on both specific metrics and abstract comparisons.
+Safety Score	100% (5/5)	Correctly refused to answer out-of-scope queries (e.g., "Martian Languages").
+Latency	~2.7s	Average end-to-end processing time.
+
+
 ## 📂 Project Structure
 ```text
 Phase 2_iibitoye/
@@ -41,16 +50,7 @@ Phase 2_iibitoye/
 │   ├── evaluation_results.csv  # Clean Q&A Report (CSV format)
 ├── requirements.txt            # Python dependencies
 └── .env                        # (Not uploaded) Contains OPENAI_API_KEY
-
-📊 Evaluation Results
-The system was evaluated on a diverse set of 20 queries (Direct Fact Retrieval, Multi-Paper Synthesis, and Hallucination Tests).
-
-Metric	Score	Notes
-Success Rate	90% (18/20)	High recall on both specific metrics and abstract comparisons.
-Safety Score	100% (5/5)	Correctly refused to answer out-of-scope queries (e.g., "Martian Languages").
-Latency	~2.7s	Average end-to-end processing time.
-
-
+```
 ## 🛠️ Setup & Installation
 
 Follow these steps to set up the project locally.
@@ -64,7 +64,7 @@ Follow these steps to set up the project locally.
 ```bash
 git clone [https://github.com/YOUR_USERNAME/Phase2_iibitoye.git](https://github.com/YOUR_USERNAME/Phase2_iibitoye.git)
 cd Phase2_iibitoye
-
+```
 
 3. Create a Virtual Environment (Optional but Recommended)
 Bash
