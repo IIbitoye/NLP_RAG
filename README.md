@@ -79,7 +79,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-###4. Install Dependencies
+## 4. Install Dependencies
 
 Install all required Python packages from the requirements.txt file.
 
@@ -87,9 +87,9 @@ Install all required Python packages from the requirements.txt file.
 pip install -r requirements.txt
 ```
 
-##5. Configure Environment Variables
+## 5. Configure Environment Variables
 
-The system requires an OpenAI API key to run.
+# The system requires an OpenAI API key to run.
 
 Create a file named .env in the root directory
 
@@ -98,8 +98,8 @@ Add your API key to the .env file:
 OPENAI_API_KEY=sk-proj-your-key-here...
 
 
-###🚀 How to Run
-A. Run the Full Evaluation
+### 🚀 How to Run
+# A. Run the Full Evaluation
 
 To generate the full evaluation report on the 20-query test set, run the main evaluation script. This script uses MMR Reranking and Structured Citations.
 
@@ -110,7 +110,7 @@ Output: Prints Q&A to the console and saves the report to outputs/evaluation_res
 
 Logs: Saves detailed retrieval logs (with chunks) to logs/retrieval_logs.json.
 
-B. Interactive Mode (Test Your Own Queries)
+# B. Interactive Mode (Test Your Own Queries)
 
 To chat with the system and ask your own custom questions about low resource language NLP:
 
@@ -121,7 +121,7 @@ Usage: Type your question when prompted. Type exit to quit.
 
 Note: This mode includes an experimental "Query Expansion" feature that im testing for Phase 3 that brainstorms synonyms of the query before searching.
 
-C. Re-Ingest Data (Optional)
+# C. Re-Ingest Data (Optional)
 
 If you want to rebuild the database from scratch (e.g., if I added new PDFs to data/):
 
