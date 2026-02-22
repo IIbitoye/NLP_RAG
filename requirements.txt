@@ -12,3 +12,6 @@ python-dotenv
 tiktoken
 faiss-cpu
 rank_bm25
+langchain-ollama
+langchain-huggingface 
+sentence-transformers

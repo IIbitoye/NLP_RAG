@@ -129,7 +129,10 @@ def run_query(question):
         
         answer = result_json.get("answer", "Error parsing answer")
         raw_ids = result_json.get("citations", [])
-        
+        for s_id, readable_cite in SOURCE_ID_TO_CITATION.items():
+            answer = answer.replace(f"[{s_id}]", f"({readable_cite})")
+
+
         # Convert IDs to Real Citations
         readable_citations = []
         for rid in raw_ids:
