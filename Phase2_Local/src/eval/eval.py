@@ -45,19 +45,16 @@ vector_store = Chroma(
 
 # --- 3. HELPER FUNCTIONS ---
 def build_citation_map(manifest_path):
-    # (Kept simple for local run - mapping filenames to citations)
-    if not os.path.exists(manifest_path):
-        return {}
-    
     mapping = {}
+    if not os.path.exists(manifest_path):
+        print("⚠️ Manifest not found!")
+        return mapping
+    
     try:
         df = pd.read_csv(manifest_path)
-        # normalize columns
-        df.columns = [c.strip().lower() for c in df.columns]
-        
-        # simple guess for columns
-        fname_col = next((c for c in df.columns if 'file' in c), None)
-        cite_col = next((c for c in df.columns if 'citation' in c), None)
+        # Find columns dynamically
+        fname_col = next((c for c in df.columns if 'file' in c.lower()), None)
+        cite_col = next((c for c in df.columns if 'citation' in c.lower()), None)
         
         if fname_col and cite_col:
             for _, row in df.iterrows():
@@ -66,6 +63,7 @@ def build_citation_map(manifest_path):
                 mapping[f] = c
     except Exception as e:
         print(f"⚠️ Manifest Error: {e}")
+        
     return mapping
 
 # Load Citation Map
@@ -90,7 +88,7 @@ QUESTION:
 INSTRUCTIONS:
 1. Answer clearly based ONLY on the context.
 2. If the context is empty or irrelevant, strictly return "Insufficient Evidence".
-3. Return the output as a raw JSON object (no markdown formatting).
+3. Return ONLY a valid JSON object. Do not include markdown tags like ```json or any conversational text.
 
 JSON FORMAT:
 {{
@@ -160,17 +158,17 @@ def run_query(question):
     return {
         "question": question,
         "answer": answer_text,
-        "citations": citations,
+        "citations_readable": citations,
         "retrieved_chunks": retrieved_log,
         "time_taken": round(elapsed, 2)
     }
-
+    
 # --- 4. QUESTIONS ---
 questions = [
     "What is Masakhane?",
     "What are the main findings of the AfroBench paper?",
     "How does 'NLLB' handle low-resource languages?",
-    "What is the 'Bitter Lesson' described in the context?"
+    "What is the 'Bitter Lesson' described in the context?",
     # Direct
     "What specific failures does the 'AfroBench' paper identify in current LLMs?",
     "According to Conneau (2020), how does XLM-R compare to mBERT?",
