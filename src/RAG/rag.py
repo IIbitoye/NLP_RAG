@@ -1,7 +1,8 @@
 import os
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain.prompts import ChatPromptTemplate
+from langchain_ollama import ChatOllama
+from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,11 +16,12 @@ vector_store = Chroma(
     persist_directory=DB_PATH, 
     embedding_function=OpenAIEmbeddings()
 )
-retriever = vector_store.as_retriever(search_kwargs={"k": 5}) # Get top 5 chunks
+retriever = vector_store.as_retriever(search_kwargs={"k": 15})
 
-# 2. Setup LLM 
-llm = ChatOpenAI(model="gpt-4o", temperature=0)
-
+# 2. Setup Primary and Fallback LLMs 
+# max_retries=0 ensures it fails fast and swaps to Ollama instantly if the API is down
+primary_llm = ChatOpenAI(model="gpt-4o", temperature=0, max_retries=2)
+fallback_llm = ChatOllama(model="llama3.2", temperature=0)
 
 PROMPT_TEMPLATE = """
 You are a Research Assistant. Use ONLY the provided context to answer the question.
@@ -37,8 +39,8 @@ INSTRUCTIONS:
 
 OUTPUT FORMAT (JSON):
 {{
-  "answer": "Your answer here...",
-  "citations": ["source_01", "source_05"]
+ "answer": "Your answer...",
+  "citations": ["source_01", "source_02", "source_03", "source_04"]
 }}
 """
 
@@ -54,9 +56,17 @@ def query_rag(question):
         for doc in docs
     ])
     
-    # C. Generate Answer
-    chain = prompt | llm
-    response = chain.invoke({"context": context_text, "question": question})
+    # C. Generate Answer with Fallback Logic
+    try:
+        # Try OpenAI first
+        chain = prompt | primary_llm
+        response = chain.invoke({"context": context_text, "question": question})
+    except Exception as e:
+        # If OpenAI fails, print a warning and hot-swap to Ollama
+        print(f"\n⚠️ OpenAI API Error: {e}")
+        print("🔄 Hot-swapping to Local Llama 3.2 Backup Model...\n")
+        chain = prompt | fallback_llm
+        response = chain.invoke({"context": context_text, "question": question})
     
     return response.content, docs
 

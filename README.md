@@ -1,76 +1,82 @@
-# Personal Research Portal (PRP) 
-**Author:** Iteoluwa Ibitoye
+# 🌍 Personal Research Portal (PRP)
+**Author:** Iteoluwa Ibitoye  
+**Course:** AI Systems Management  
 
-**Course:** AI Systems Management
-
-
-# 🌍 Low-Resource NLP RAG: A Research Assistant for African Languages
-
-This is a retrieval-augmented generation (RAG) pipeline designed to answer research questions about **Low-Resource NLP and African Languages**. It ingests 30+ academic papers, chunks them, and uses OpenAI's GPT-4o with a "Retrieval-First" prompt strategy to ensure grounded answers.
+## 📖 Overview
+This is a retrieval-augmented generation (RAG) pipeline and interactive web portal designed to answer research questions about **Low-Resource NLP and African Languages**. It ingests 30+ academic papers, chunks them, and uses OpenAI's GPT-4o with a "Retrieval-First" prompt strategy to ensure highly grounded, citation-backed answers.
 
 ## 🚀 Key Features
-* **Domain-Specific Corpus:** Indexed 34 high-impact papers (Masakhane, NLLB, AfroBench).
-* **MMR Reranking:** Uses Maximal Marginal Relevance to retrieve diverse perspectives for synthesis questions.
-* **Trusted Citations:** Automatically maps vector chunks to formal academic citations (e.g., `(Adebara et al., 2022)`).
-* **Dual Logging:** Generates clean reports for users and detailed retrieval logs for debugging.
+
+Domain-Specific Corpus: Indexed 34 high-impact papers (Masakhane, NLLB, AfroBench).
+MMR Reranking: Uses Maximal Marginal Relevance to retrieve diverse perspectives for synthesis questions.
+Trusted Citations: Automatically maps vector chunks to formal academic citations (e.g., (Adebara et al., 2022)).
+Dual Logging: Generates clean reports for users and detailed retrieval logs for debugging.
+
+### ✨ What's New in Phase 3
+* **Interactive Streamlit UI:** A conversational interface with real-time citation tracking and session memory.
+* **Automated Artifact Generation:** Instantly exports Evidence Tables (CSV), Annotated Bibliographies (APA Markdown), and 800+ word Synthesis Memos (Markdown).
+* **LLM Hot-Swapping:** A defensive engineering fallback that automatically routes requests to a local `Llama 3.2` model if the OpenAI API fails or hits rate limits.
+* **Evaluation Dashboard:** In-app metrics tracking system latency, groundedness, and citation correctness.
+
+---
 
 ## 🛠️ Architecture
 * **Ingestion:** `PyPDFLoader` + `RecursiveCharacterTextSplitter` (Chunk size: 1000, Overlap: 200).
 * **Embedding:** OpenAI `text-embedding-3-small`.
-* **Vector Store:** ChromaDB (Persistent).
-* **Retrieval:** MMR (`k=12`, `fetch_k=20`) to reduce redundancy.
-* **Generation:** GPT-4o with strict "insufficient evidence" guardrails.
+* **Vector Store:** ChromaDB (Persistent local database).
+* **Retrieval:** MMR (`k=12`, `fetch_k=20`) to reduce redundancy and enforce diverse context.
+* **Generation:** `GPT-4o` (Primary) with `Llama 3.2` (Fallback), featuring strict "insufficient evidence" guardrails.
 
-📊 Evaluation Results
+---
+
+## 🔬 Methodology & Evaluation
+
+### Corpus Selection Process
+The corpus consists of 34 high-impact academic papers focusing specifically on low-resource Natural Language Processing for African languages. Papers were selected based on their relevance to multilingual benchmarking (e.g., AfroBench), community-driven NLP initiatives (e.g., Masakhane), and machine translation architectures (e.g., NLLB). The selection aims to provide a comprehensive overview of the current challenges, methodologies, and datasets unique to this domain.
+
+### Groundedness Metric Definition
+Groundedness measures the extent to which the model's generated answer is directly supported by the retrieved context chunks. It is scored manually on a 1-4 scale:
+* **1:** Complete hallucination or contradiction.
+* **2:** Mentions topic but relies heavily on external parametric knowledge.
+* **3:** Mostly supported, but contains minor logical leaps.
+* **4:** Fully supported, factually accurate, and entirely traceable to the provided chunks.
+
+### 📊 Evaluation Results
 The system was evaluated on a diverse set of 20 queries (Direct Fact Retrieval, Multi-Paper Synthesis, and Hallucination Tests).
 
-Metric	Score	Notes
-Success Rate	90% (18/20)	High recall on both specific metrics and abstract comparisons.
-Safety Score	100% (5/5)	Correctly refused to answer out-of-scope queries (e.g., "Martian Languages").
-Latency	~2.7s	Average end-to-end processing time.
+| Metric | Score | Notes |
+| :--- | :--- | :--- |
+| **Success Rate** | 90% (18/20) | High recall on both specific metrics and abstract comparisons. |
+| **Safety Score** | 100% (5/5) | Correctly refused to answer out-of-scope edge cases. |
+| **Avg. Groundedness** | 3.90 / 4.0 | Exceptional adherence to retrieved context. |
+| **Latency** | ~3.18s | Average end-to-end processing time per query. |
 
+### Explicit Failure Case Analysis
+During evaluation, the system exhibited two primary failure modes:
+1. **Cross-Document Synthesis Gap:** For queries requiring comparisons between multiple distinct models, MMR retrieval sometimes failed to pull adequate chunks for *both* papers simultaneously, triggering an 'Insufficient Evidence' guardrail.
+2. **Vocabulary Mismatch:** Queries using terminology that heavily deviated from the authors' specific phrasing (e.g., searching "manual collection" instead of "crowdsourcing") occasionally resulted in missed retrievals due to the rigid semantic matching of the embedding model.
+
+---
 
 ## 📂 Project Structure
 ```text
 Phase 2_iibitoye/
+├── app.py                      # MAIN STREAMLIT APPLICATION (Phase 3 UI)
 ├── data/ 
 │   ├── data_manifest.csv       # Metadata (Filename -> Citation mapping)
-|   |--raw/pdfs
-|   |--chroma_db/
-├── logs/
-│   ├── retrieval_logs.json     # Detailed logs including retrieved chunks for auditing
-├── src/
-│   ├── ingest/
-│   │   ├── ingest.py           # Parses PDFs and builds the ChromaDB vector store
-│   ├── eval/
-│   │   ├── eval.py             # Main Evaluation Script (Implements MMR + Logging)
-│   │   ├── json_to_csv.py      # Utility to convert JSON reports to CSV for grading
-│   ├── RAG/
-│   │   ├── rag.py              # Core RAG logic module
-│   │   ├── query.py            # Interactive CLI for testing custom queries
+│   ├── raw/pdfs/               # Original 34 academic papers
+│   └── chroma_db/              # Persistent vector database
 ├── outputs/
-│   ├── evaluation_results.json # Clean Q&A Report (JSON format)
-│   ├── evaluation_results.csv  # Clean Q&A Report (CSV format)
+│   ├── evaluation_grading_sheet2.csv # Full grading metrics
+│   └── chat_history.json       # Persistent session memory for UI
+├── src/
+│   ├── ingest/ingest.py        # Parses PDFs and builds ChromaDB
+│   ├── eval/eval.py            # Main Evaluation Script (MMR + Logging)
+│   └── RAG/
+│       ├── rag.py              # Core RAG logic with LLM Fallback
+│       └── query.py            # CLI query tool with Multi-Query Expansion
 ├── requirements.txt            # Python dependencies
-└── .env                        # (Not uploaded) Contains OPENAI_API_KEY
-└──Phase2_Local                <-- Seperate but exactly identical folder using Ollama LLM's instead of OpenAi so there's  no need for API keys
-|   ├── .env                  
-|   ├── requirements.txt      <-- (Local Dependencies: ollama, huggingface)
-|   │
-|   ├── data/                 <-- (Local Data Copy)
-    │   ├── raw/              <-- (Copy of PDFs)
-    │   ├── data_manifest.csv <-- (Copy of Manifest)
-    │   └── chroma_db/        <
-    │
-    ├── src/                  <-- (Local Code - Ollama)
-    │   ├── ingest/ingest.py  <-- (Uses HuggingFace Embeddings)
-    │   ├── RAG/rag.py        <-- (Uses Llama 3.2)
-    │   ├── RAG/query.py
-    │   └── eval/eval.py
-    │
-    ├── outputs/              <-- (Local Results)
-    └── logs/                 <-- (Local Logs)
-```
+└── .env                        # Contains OPENAI_API_KEY
 
 ## 🛠️ Setup & Installation
 
@@ -83,7 +89,7 @@ Follow these steps to set up the project locally.
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Phase2_iibitoye.git](https://github.com/YOUR_USERNAME/Phase2_iibitoye.git)
+git clone [https://github.com/iibitoye/Phase2_iibitoye.git](https://github.com/YOUR_USERNAME/Phase2_iibitoye.git)
 cd Phase2_iibitoye
 ```
 
@@ -121,7 +127,13 @@ OPENAI_API_KEY=sk-proj-your-key-here...
 
 
 ### 🚀 How to Run
-# A. Run the Full Evaluation
+# A. Launch the Web Portal (Main Feature)
+To launch the full Phase 3 interactive UI for direct querying, and click on "esport artifacts" to generatte synthesis memo, annotated bibliography, and evidence table artifacts, and view the evaluation dashboard:
+
+``` bash
+streamlit run app.py
+```
+# B. Run the Full Evaluation
 
 To generate the full evaluation report on the 20-query test set, run the main evaluation script. This script uses MMR Reranking and Structured Citations.
 
@@ -132,7 +144,7 @@ Output: Prints Q&A to the console and saves the report to outputs/evaluation_res
 
 Logs: Saves detailed retrieval logs (with chunks) to logs/retrieval_logs.json.
 
-# B. Interactive Mode (Test Your Own Queries)
+# C. Interactive Mode (Test Your Own Queries)
 
 To chat with the system and ask your own custom questions about low resource language NLP:
 
@@ -141,7 +153,7 @@ python src/RAG/query.py
 ```
 Usage: Type your question when prompted. Type exit to quit.
 
-Note: This mode includes an experimental "Query Expansion" feature that im testing for Phase 3 that brainstorms synonyms of the query before searching.
+Note: This mode includes an experimental "Query Expansion" feature that brainstorms and uses synonyms of the query before searching.
 
 # C. Re-Ingest Data (Optional)
 

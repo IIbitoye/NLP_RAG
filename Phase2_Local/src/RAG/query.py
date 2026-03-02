@@ -32,7 +32,8 @@ llm = ChatOllama(model="llama3.2", temperature=0)
 prompt = ChatPromptTemplate.from_template("""
 You are a helpful research assistant. 
 Answer the question based ONLY on the context below.
-If you don't know, say "Insufficient Evidence".
+If you don't know, say "Insufficient Evidence" , explain why, AND suggest a specific next search query or retrieval step the user should take to find the missing information.
+Cite your sources using the [source_id] provided in the metadata.
 
 Context:
 {context}

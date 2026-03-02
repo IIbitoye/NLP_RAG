@@ -86,14 +86,14 @@ QUESTION:
 
 INSTRUCTIONS:
 1. Answer clearly and concisely.
-2. If the context has no answer, say "Insufficient Evidence".
+2. If the context does not contain the answer, explicitly state "Insufficient Evidence", explain why, AND suggest a specific next search query the user should try.
 3. Cite your sources using the [source_id] found in the context (e.g., [source_05]).
 4. If the context has multiple sources, cite the relevant ones.
 
 OUTPUT FORMAT (JSON):
 {{
   "answer": "Your answer...",
-  "citations": ["source_01", "source_05"]
+  "citations": ["source_01", "source_02", "source_03", "source_04"]
 }}
 """
 prompt = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
@@ -101,10 +101,19 @@ prompt = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
 def run_query(question):
     print(f"\n🔵 Query: {question}")
     start_time = time.time()
-    
-    # 1. Retrieve
-    docs = retriever.invoke(question)
-    
+
+    # --- NEW: QUERY EXPANSION ---
+    expansion_prompt = ChatPromptTemplate.from_template(
+        "Generate 3 synonyms or related academic keywords for this query. Output ONLY a space-separated list of words. Query: {question}"
+    )
+    expanded_keywords = (expansion_prompt | llm).invoke({"question": question}).content
+    enhanced_query = f"{question} {expanded_keywords}"
+    print(f"🔍 Expanded Search: {enhanced_query}")
+    # ----------------------------
+
+    # 1. Retrieve (Using the enhanced query instead of the basic one)
+    docs = retriever.invoke(enhanced_query)
+   
     # 2. Process Context & Log Chunks
     context_text = ""
     retrieved_chunks_log = [] 
@@ -199,24 +208,56 @@ if __name__ == "__main__":
     for q in questions:
         full_results.append(run_query(q))
     
-    
-    # 1. Summary (Clean for Report)
+   # 1. Summary ()
     summary_results = []
-    for res in full_results:
+    for i, res in enumerate(full_results):
         summary_results.append({
-            "question": res["question"],
-            "answer": res["answer"],
-            "citations": res["citations_readable"],
-            "time_taken": res["time_taken"]
+            "Task_ID": f"Task_{i+1}",
+            "Query": res["question"],
+            "Answer": res["answer"],
+            "Latency_Seconds": res["time_taken"],
+            "Retrieved_Evidence_IDs": " | ".join(res["citations_readable"]) if res["citations_readable"] else "None",
+            "Score_1_Groundedness_1_to_4": "", # Leave blank for manual grading
+            "Score_2_Citation_1_to_4": "",     # Leave blank for manual grading
+            "Score_3_Usefulness_1_to_4": "",   # Leave blank for manual grading
+            "Failure_Notes": ""
         })
     
-    with open(SUMMARY_PATH, "w") as f:
-        json.dump(summary_results, f, indent=2)
-        
-    # 2. Detailed Logs
+    # Save as CSV so you can open in Excel/Numbers and grade quickly
+    df = pd.DataFrame(summary_results)
+    csv_path = os.path.join(OUTPUT_DIR, "evaluation_grading_sheet.csv")
+    df.to_csv(csv_path, index=False)
+    
+    # 2. Detailed Logs (Keep this exactly the same)
     with open(LOGS_PATH, "w") as f:
         json.dump(full_results, f, indent=2)
 
     print(f"\n✅ Done! Files Saved:")
-    print(f"📄 Report Data: {SUMMARY_PATH}")
-    print(f"🪵  Run Logs:   {LOGS_PATH}")
+    print(f"📊 Grading Sheet: {csv_path}")
+    print(f"🪵  Run Logs:     {LOGS_PATH}")
+
+
+    # print(f"\n✅ Done! Files Saved:")
+    # print(f"📄 Report Data: {SUMMARY_PATH}")
+    # print(f"🪵  Run Logs:   {LOGS_PATH}")
+
+    # 1. Summary (Clean for Report)
+    # summary_results = []
+    # for res in full_results:
+    #     summary_results.append({
+    #         "question": res["question"],
+    #         "answer": res["answer"],
+    #         "citations": res["citations_readable"],
+    #         "time_taken": res["time_taken"]
+    #     })
+    
+    # with open(SUMMARY_PATH, "w") as f:
+    #     json.dump(summary_results, f, indent=2)
+        
+    # # 2. Detailed Logs
+    # with open(LOGS_PATH, "w") as f:
+    #     json.dump(full_results, f, indent=2)
+
+    # print(f"\n✅ Done! Files Saved:")
+    # print(f"📄 Report Data: {SUMMARY_PATH}")
+    # print(f"🪵  Run Logs:   {LOGS_PATH}")
