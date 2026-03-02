@@ -1,0 +1,17 @@
+pandas
+chromadb
+langchain==0.3.0
+langchain_core
+langchain-community
+langchain-chroma
+langchain-openai
+langchain-classic
+pypdf
+openai
+python-dotenv
+tiktoken
+faiss-cpu
+rank_bm25
+langchain-ollama
+langchain-huggingface 
+sentence-transformers
