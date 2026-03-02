@@ -167,11 +167,23 @@ elif page == "📊 Export Artifacts":
                 # Loop through the top chunk used for this claim
                 if item.get('chunks'):
                     chunk = item['chunks'][0]
-                    snippet = chunk.get('text_snippet', 'N/A')[:200] + "..."
-                    s_id = chunk.get('source_id', 'unknown_source')
                     
+                    # Grab the raw text and clean out the weird PDF newlines/spaces
+                    raw_snippet = chunk.get('text_snippet', 'N/A')
+                    clean_snippet = " ".join(raw_snippet.split())
+                    
+                    # Give it a nice clean cutoff at 250 characters
+                    snippet = clean_snippet if len(clean_snippet) <= 250 else clean_snippet[:247].strip() + "..."
+                    
+                    s_id = chunk.get('source_id', 'unknown_source')
+
+                    # Extract the actual claim (The first sentence of the AI's generated answer)
+                    full_answer = item.get('answer', 'No answer generated.')
+                    extracted_claim = full_answer.split('.')[0].strip() + "." if '.' in full_answer else full_answer
+                    
+                    # Append to the table
                     artifact_data.append({
-                        "Claim": item['query'],
+                        "Claim": extracted_claim,  # <--- FIXED: Now it states a fact, not a question!
                         "Evidence snippet": snippet,
                         "Citation (source_id, chunk_id)": f"({s_id}, chunk_0)",
                         "Confidence": "High",

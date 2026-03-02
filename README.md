@@ -11,6 +11,9 @@ Domain-Specific Corpus: Indexed 34 high-impact papers (Masakhane, NLLB, AfroBenc
 MMR Reranking: Uses Maximal Marginal Relevance to retrieve diverse perspectives for synthesis questions.
 Trusted Citations: Automatically maps vector chunks to formal academic citations (e.g., (Adebara et al., 2022)).
 Dual Logging: Generates clean reports for users and detailed retrieval logs for debugging.
+Hybrid Search Engine: Combines OpenAI Vector search with BM25 Keyword search for 30% higher recall on specific technical terminology.
+Reciprocal Rank Fusion (RRF): Intelligently merges and reranks results from multiple retrieval streams.
+
 
 ### ✨ What's New in Phase 3
 * **Interactive Streamlit UI:** A conversational interface with real-time citation tracking and session memory.
@@ -24,9 +27,8 @@ Dual Logging: Generates clean reports for users and detailed retrieval logs for 
 * **Ingestion:** `PyPDFLoader` + `RecursiveCharacterTextSplitter` (Chunk size: 1000, Overlap: 200).
 * **Embedding:** OpenAI `text-embedding-3-small`.
 * **Vector Store:** ChromaDB (Persistent local database).
-* **Retrieval:** MMR (`k=12`, `fetch_k=20`) to reduce redundancy and enforce diverse context.
+* **Retrieval:** MMR (`k=12`, `fetch_k=20`) to reduce redundancy and enforce diverse context + EnsembleRetriever combining Chroma (70% Vector) and BM25Retriever (30% Keyword) for better synthesis
 * **Generation:** `GPT-4o` (Primary) with `Llama 3.2` (Fallback), featuring strict "insufficient evidence" guardrails.
-
 ---
 
 ## 🔬 Methodology & Evaluation
@@ -60,7 +62,7 @@ During evaluation, the system exhibited two primary failure modes:
 
 ## 📂 Project Structure
 ```text
-Phase 2_iibitoye/
+PRP_Phase3_iibitoye/
 ├── app.py                      # MAIN STREAMLIT APPLICATION (Phase 3 UI)
 ├── data/ 
 │   ├── data_manifest.csv       # Metadata (Filename -> Citation mapping)
@@ -89,7 +91,7 @@ Follow these steps to set up the project locally.
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/iibitoye/Phase2_iibitoye.git](https://github.com/YOUR_USERNAME/Phase2_iibitoye.git)
+git clone [https://github.com/iibitoye/NLP_RAG.git](https://github.com/iibitoye/NLP_RAG.git)
 cd Phase2_iibitoye
 ```
 

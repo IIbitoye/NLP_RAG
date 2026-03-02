@@ -3,6 +3,10 @@ from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_community.retrievers import BM25Retriever
+from langchain_community.retrievers import EnsembleRetriever
+from langchain_core.documents import Document
+# ----------------------------------------
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,7 +20,24 @@ vector_store = Chroma(
     persist_directory=DB_PATH, 
     embedding_function=OpenAIEmbeddings()
 )
-retriever = vector_store.as_retriever(search_kwargs={"k": 15})
+
+print("⏳ Booting up Hybrid Retrieval Engine (Vector + Keyword)...")
+
+# A. The Semantic Retriever (Finds concepts & synonyms)
+vector_retriever = vector_store.as_retriever(search_type="mmr",search_kwargs={"k": 10})
+
+# B. The Keyword Retriever (Finds exact terminology like "manual" or "automated")
+db_data = vector_store.get()
+all_docs = [Document(page_content=txt, metadata=meta) for txt, meta in zip(db_data['documents'], db_data['metadatas'])]
+keyword_retriever = BM25Retriever.from_documents(all_docs)
+keyword_retriever.k = 10
+
+# C. The Fusion Engine (Merges and ranks the results)
+retriever = EnsembleRetriever(
+    retrievers=[vector_retriever, keyword_retriever],
+    weights=[0.7, 0.3] # 70% Semantic Focus, 30% Exact Keyword Focus
+)
+print("✅ Hybrid Retrieval Ready!\n")
 
 # 2. Setup Primary and Fallback LLMs 
 # max_retries=0 ensures it fails fast and swaps to Ollama instantly if the API is down
@@ -47,7 +68,7 @@ OUTPUT FORMAT (JSON):
 prompt = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
 
 def query_rag(question):
-    # A. Retrieve
+    # A. Retrieve (Now uses the Hybrid Ensemble!)
     docs = retriever.invoke(question)
     
     # B. Format Context
